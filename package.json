@@ -1,7 +1,7 @@
 {
   "name": "ssr-test",
   "version": "0.0.1",
-  "description": "How to do SSR right",
+  "description": "testing library packaging and workspace configs for ssr",
   "license": "MIT",
   "repository": {
     "type" : "git",
@@ -11,7 +11,10 @@
   "private": true,
   "scripts": {
     "build": "turbo run build --concurrency 20",
-    "dev": "turbo run dev --concurrency 20"
+    "dev": "turbo run dev --concurrency 20",
+    "lint-fix": "turbo run lint-fix --concurrency 20",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "build:pages": "./makeSite.sh"
   },
   "devDependencies": {
     "@turbo/gen": "^1.10.7",
