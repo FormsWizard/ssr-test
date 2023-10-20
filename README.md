@@ -1,5 +1,7 @@
 # SSR and turbo test ground
 
+[![Deploy site to Pages](https://github.com/FormsWizard/ssr-test/actions/workflows/pages.yml/badge.svg)](https://github.com/FormsWizard/ssr-test/actions/workflows/pages.yml)
+
 This is a simple test ground for SSR related issues when building libraries that should work seamlessly in
 several react environments (next.js, create-react-app, etc).
 
@@ -8,7 +10,18 @@ several react environments (next.js, create-react-app, etc).
 ```bash
 pnpm i
 pnpm build
-pnpm start
+```
+
+for CRA
+
+```bash
+cd ./apps/cra && pnpm start && cd -
+```
+
+for next.js
+
+```bash
+cd ./apps/next && pnpm dev && cd -
 ```
 
 ## What is being tested
