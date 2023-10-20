@@ -2,6 +2,7 @@
   "name": "ssr-test-cra",
   "version": "0.0.0",
   "private": true,
+  "homepage": "/ssr-test/cra",
   "scripts": {
     "start": "serve -s build -l 3000",
     "dev": "react-scripts start",
