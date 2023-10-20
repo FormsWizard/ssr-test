@@ -15,6 +15,7 @@
     "lint-fix": "turbo run lint-fix --concurrency 20",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "build:pages": "./makeSite.sh"
+
   },
   "devDependencies": {
     "@turbo/gen": "^1.10.7",

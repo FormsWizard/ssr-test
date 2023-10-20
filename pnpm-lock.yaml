@@ -13,6 +13,9 @@ importers:
       eslint-config-ssr-test:
         specifier: workspace:*
         version: link:packages/eslint-config-custom
+      json:
+        specifier: ^11.0.0
+        version: 11.0.0
       prettier:
         specifier: ^3.0.0
         version: 3.0.0

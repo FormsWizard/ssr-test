@@ -1,3 +1,3 @@
 export const RawAndDistComponent = () => {
-  return <h1>Hello from RawAndDistComponent</h1>
-}
+  return <h1>Hello from RawAndDistComponent</h1>;
+};

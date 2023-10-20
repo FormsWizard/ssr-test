@@ -1,5 +1,4 @@
-SSR and turbo test ground
-==========================
+# SSR and turbo test ground
 
 This is a simple test ground for SSR related issues when building libraries that should work seamlessly in
 several react environments (next.js, create-react-app, etc).
@@ -11,6 +10,7 @@ pnpm i
 pnpm build
 pnpm start
 ```
+
 ## What is being tested
 
 ### raw and dist
@@ -33,4 +33,3 @@ import a place holder instead.
 
 To avoid hydration errors we need to make sure that the client entry point is not executed on the server.
 We do this by using `useEffect`, which is only executed on the client.
-
