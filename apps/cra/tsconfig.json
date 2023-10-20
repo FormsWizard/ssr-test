@@ -1,0 +1,4 @@
+{
+  "extends": "ssr-test-tsconfig/react-app.json",
+  "include": ["src"]
+}

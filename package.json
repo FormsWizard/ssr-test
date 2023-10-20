@@ -1,0 +1,25 @@
+{
+  "name": "ssr-test",
+  "version": "0.0.1",
+  "description": "How to do SSR right",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/FormsWizard/ssr-test.git"
+  },
+  "contributors": [{"name": "winzlieb", "email": "winzlieb@c3d2.de"}],
+  "private": true,
+  "scripts": {
+    "build": "turbo run build --concurrency 20",
+    "dev": "turbo run dev --concurrency 20"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^1.10.7",
+    "eslint": "^8.44.0",
+    "eslint-config-ssr-test": "workspace:*",
+    "prettier": "^3.0.0",
+    "tsup": "^7.2.0",
+    "turbo": "^1.10.7"
+  },
+  "packageManager": "pnpm@7.15.0"
+}
