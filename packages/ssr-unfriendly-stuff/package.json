@@ -13,14 +13,15 @@
     }
   ],
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/server/index.js",
+  "types": "./dist/client/index.d.ts",
+  "browser": "./dist/client/index.js",
   "scripts": {
-    "build": "tsup index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup index.tsx --format esm,cjs --watch --dts --external react",
+    "build": "pnpm run build:server && pnpm run build:client",
+    "build:server": "tsup server/index.ts --format esm,cjs --dts --external react --out-dir dist/server",
+    "build:client": "tsup client/index.ts --format esm,cjs --dts --external react --out-dir dist/client",
     "lint": "eslint \"**/*.ts*\"",
-    "lint-fix": "eslint --fix \"**/*.ts*\"",
-    "generate:component": "turbo gen react-component"
+    "lint-fix": "eslint --fix \"**/*.ts*\""
   },
   "devDependencies": {
     "ssr-test-tsconfig": "workspace:*",
