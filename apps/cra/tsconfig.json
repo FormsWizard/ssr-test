@@ -1,4 +1,7 @@
 {
   "extends": "ssr-test-tsconfig/react-app.json",
-  "include": ["src"]
+  "include": ["src"],
+  "compilerOptions": {
+    "jsx": "react"
+  }
 }

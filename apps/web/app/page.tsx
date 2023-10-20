@@ -1,13 +1,19 @@
 'use client'
 import {MyComponent} from 'ssr-unfriendly-stuff';
+import {RawAndDistComponent} from 'raw-and-dist-src';
+import {MyMap} from "leaflet-stuff";
+
 const Page = () => {
-  //const WizardMainLayout = dynamic(() => import('./WizardMainLayoutNoSSR').then((mod) => mod.WizardMainLayout), { ssr: false })
 
   return (
-    <h1>
-      Welcome to Next.JS
+      <span>
+      <h1>Welcome to Next.JS</h1>
       <MyComponent/>
-    </h1>
+      <RawAndDistComponent/>
+      <div style={{height: '800px'}}>
+        <MyMap/>
+      </div>
+    </span>
   )
 }
 

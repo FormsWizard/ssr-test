@@ -1,0 +1,43 @@
+{
+  "name": "leaflet-stuff",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FormsWizard/ssr-test.git"
+  },
+  "contributors": [
+    {
+      "name": "winzlieb",
+      "email": "winzlieb@c3d2.de"
+    }
+  ],
+  "type": "module",
+  "main": "./dist/server/index.js",
+  "types": "./dist/client/index.d.ts",
+  "browser": "./dist/client/index.js",
+  "scripts": {
+    "build": "pnpm run build:server && pnpm run build:client",
+    "build:server": "tsup server/index.ts --format esm,cjs --dts --external react --out-dir dist/server",
+    "build:client": "tsup client/index.ts --format esm,cjs --dts --external react --out-dir dist/client",
+    "lint": "eslint \"**/*.ts*\"",
+    "lint-fix": "eslint --fix \"**/*.ts*\""
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.7",
+    "ssr-test-tsconfig": "workspace:*",
+    "eslint": "^7.32.0",
+    "eslint-config-ssr-test": "workspace:*",
+    "react": ">=18",
+    "typescript": "^4.5.2"
+  },
+  "peerDependencies": {
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "react": "^16.9.0 || ^17.0.0 || ^18",
+    "leaflet": ">=1.9",
+    "react-leaflet": ">=4"
+  },
+  "dependencies": {
+  }
+}

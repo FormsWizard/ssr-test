@@ -1,0 +1,37 @@
+{
+  "name": "raw-and-dist-src",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FormsWizard/ssr-test.git"
+  },
+  "contributors": [
+    {
+      "name": "winzlieb",
+      "email": "winzlieb@c3d2.de"
+    }
+  ],
+  "type": "module",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "scripts": {
+    "build:package.json": "cp package.json dist/ && npx json -I -f dist/package.json -e \"this.main='./index.js'; this.name='raw-and-dist'; this.types='./index.d.ts'; this.scripts=undefined; this.devDependencies=undefined; this.peerDependencies=undefined;\"",
+    "build": "tsup index.tsx --format esm,cjs --dts --external react && pnpm run build:package.json",
+    "lint": "eslint \"**/*.ts*\"",
+    "lint-fix": "eslint --fix \"**/*.ts*\""
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-ssr-test": "workspace:*",
+    "json": "^11.0.0",
+    "react": ">=18",
+    "ssr-test-tsconfig": "workspace:*",
+    "typescript": "^4.5.2"
+  },
+  "peerDependencies": {
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "react": "^16.9.0 || ^17.0.0 || ^18"
+  }
+}
