@@ -22,6 +22,9 @@
     "web-vitals": "^2.1.2"
   },
   "devDependencies": {
+    "ssr-test-tsconfig": "workspace:*",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.14",
     "@types/react": "^18.2.20",

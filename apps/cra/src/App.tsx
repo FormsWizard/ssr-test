@@ -6,9 +6,9 @@ export const App = () => {
       <span>
         <h1>Welcome CRA</h1>
         <RawAndDistComponent/>
-      <div style={{height: '800px'}}>
-        <MyMap/>
-      </div>
+        <div style={{height: '800px'}}>
+          <MyMap/>
+        </div>
       </span>
   )
 }
