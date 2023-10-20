@@ -1,4 +1,4 @@
-name: Deploy Next.js site to Pages
+name: Deploy sites to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -44,6 +44,11 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-ssr-test-${{ hashFiles('**/pnpm-lock.json') }}-
+      - name: make dist projects
+        run: |
+          cd packages/raw-and-dist
+          pnpm install --no-frozen-lockfile
+          pnpm build
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
       - name: Build
